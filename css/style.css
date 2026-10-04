@@ -187,16 +187,98 @@ footer{padding:70px clamp(20px,9vw,150px) 22px;background:#05050b}
 }
 
 /* Artes geradas para transformar a navegação em uma experiência visual. */
-.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#070812 0%,rgba(7,8,18,.92) 31%,rgba(7,8,18,.38) 62%,rgba(7,8,18,.12)),url('../assets/images/hero-portal-geek.png') center/cover no-repeat}
+.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#070812 0%,rgba(7,8,18,.92) 31%,rgba(7,8,18,.38) 62%,rgba(7,8,18,.12)),url('../assets/images/hero-portal-geek.jpg') center/cover no-repeat}
 .hero-grid{z-index:0}
-.portal-visual{z-index:1;opacity:.84}
+.portal-visual{z-index:1;opacity:.65;pointer-events:none;background:radial-gradient(circle,rgba(53,167,255,.12),rgba(55,45,130,.08) 35%,transparent 65%);filter:drop-shadow(0 0 18px rgba(53,167,255,.3));animation:portal-drift 14s ease-in-out infinite}
+.portal-visual .core{inset:38%;background:radial-gradient(circle,rgba(53,167,255,.08),transparent 70%);color:rgba(199,226,255,.9);font-size:clamp(22px,3vw,35px);letter-spacing:.08em;box-shadow:none;text-shadow:0 0 16px rgba(53,167,255,.35);animation:portal-signature 9s ease-in-out infinite}
+.portal-visual .ring{border-color:rgba(129,214,255,.25)}
+.portal-visual .r2{border-color:rgba(255,64,166,.2)}
+.portal-visual .r3{border-color:rgba(157,78,221,.22)}
+.portal-visual .planet{opacity:.35;box-shadow:0 0 16px rgba(157,78,221,.3)}
+.portal-visual .star{opacity:.4;box-shadow:0 0 8px rgba(129,214,255,.4)}
+@keyframes portal-drift{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+@keyframes portal-signature{0%,100%{opacity:.75;transform:translateY(2px) scale(.96)}50%{opacity:1;transform:translateY(-3px) scale(1.02)}}
+@media(prefers-reduced-motion:reduce){.portal-visual,.portal-visual .core,.portal-visual .ring{animation:none}}
 .hero-text{color:#d0d1df}
 .btn-ghost{background:rgba(7,8,18,.35);backdrop-filter:blur(5px)}
-.product-art i{z-index:1;padding:5px 7px;background:rgba(5,5,12,.62)}
-.product-photo{background-image:linear-gradient(180deg,transparent 52%,rgba(7,8,18,.5)),url('../assets/images/colecao-geek.png');background-size:cover}
-.photo-figure{background-position:10% center}
-.photo-game{background-position:48% center}
-.photo-cards{background-position:55% 88%}
-.photo-lamp{background-position:84% 23%}
-.community{position:relative;overflow:hidden;background:linear-gradient(90deg,#0b0b16 15%,rgba(11,11,22,.88) 55%,rgba(11,11,22,.7)),url('../assets/images/hero-portal-geek.png') right center/cover}
+.products .product-art i{z-index:1;top:14px;left:14px;width:42px;height:42px;display:grid;place-items:center;padding:0;border:1px solid rgba(53,167,255,.55);border-radius:12px 4px 12px 4px;background:linear-gradient(135deg,rgba(18,25,46,.94),rgba(7,8,18,.85));color:#bde8ff;font:500 15px var(--mono);font-style:normal;letter-spacing:.04em;box-shadow:0 4px 14px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.1);backdrop-filter:blur(8px)}
+.products .photo-figure i{color:var(--lime);border-color:rgba(200,255,77,.5)}
+.products .photo-cards i{color:#edcaff;border-color:rgba(157,78,221,.65)}
+.products .photo-lamp i{color:#ffb8dc;border-color:rgba(255,63,164,.5)}
+.product-photo{height:auto;aspect-ratio:1;background:#121020 url('../assets/images/catalogo-neon.png') no-repeat;background-size:200% 200%}
+.product-photo:before{content:none}
+.photo-figure{background-position:left top}
+.photo-game{background-position:right top}
+.photo-cards{background-position:left bottom}
+.photo-lamp{background-position:right bottom}
+.community{position:relative;overflow:hidden;background:linear-gradient(90deg,#0b0b16 15%,rgba(11,11,22,.88) 55%,rgba(11,11,22,.7)),url('../assets/images/hero-portal-geek.jpg') right center/cover}
 .community-copy,.event-stack{position:relative;z-index:1}
+
+/* Imagens das oito categorias, com contraste para os titulos. */
+.category-card{background:#10111f;isolation:isolate;min-height:260px}
+.category-card:before{inset:0;width:auto;height:auto;border-radius:0;background:var(--category-image) center/cover no-repeat;filter:none;opacity:1;z-index:-2;transition:transform .4s ease}
+.category-card:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,8,18,.25),rgba(7,8,18,.08) 30%,rgba(7,8,18,.88) 78%,#070812)}
+.category-card:hover:before{transform:scale(1.06)}
+.category-card h3{margin-top:auto;margin-bottom:14px;text-shadow:0 2px 12px #000}
+.category-card>span{align-self:flex-start;width:42px;height:42px;display:grid;place-items:center;padding:0;border:1px solid var(--accent);border-radius:12px 4px 12px 4px;background:linear-gradient(135deg,rgba(18,25,46,.94),rgba(7,8,18,.85));color:var(--accent);font:500 15px var(--mono);letter-spacing:.04em;box-shadow:0 4px 14px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.1);backdrop-filter:blur(8px)}
+.category-card>b{color:var(--accent);font-size:20px}
+.category-card.anime{--category-image:url('../assets/images/category-anime.png')}
+.category-card.games{--category-image:url('../assets/images/category-games.png')}
+.category-card.cinema{--category-image:url('../assets/images/category-cinema.png')}
+.category-card.hqs{--category-image:url('../assets/images/category-hqs.png')}
+.category-card.figures{--category-image:url('../assets/images/category-figures.png')}
+.category-card.apparel{--category-image:url('../assets/images/category-apparel.png')}
+.category-card.cards{--category-image:url('../assets/images/category-cards.png')}
+.category-card.decor{--category-image:url('../assets/images/category-decor.png')}
+@media(max-width:560px){.category-card{min-height:220px}}
+@media(prefers-reduced-motion:reduce){.category-card,.category-card:before{transition:none}.category-card:hover:before{transform:none}}
+
+/* Retratos reais de banco de imagens nas secoes demonstrativas. */
+.avatar img,.review-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.avatar:after{inset:0;width:auto;height:auto;border-radius:0;background:linear-gradient(180deg,transparent 65%,rgba(7,8,18,.4));pointer-events:none}
+.avatar{border-bottom:2px solid var(--blue)}
+.a1 img{object-position:center 32%}
+.a2 img{object-position:center 32%}
+.a3 img{object-position:center 26%}
+.a4 img{object-position:center 32%}
+.a2,.a5{border-color:var(--pink)}
+.a3{border-color:var(--lime)}
+.review-avatar{width:56px;height:56px;overflow:hidden;border:2px solid var(--purple);box-shadow:0 0 16px rgba(157,78,221,.18)}
+.rv2{border-color:var(--blue)}
+.rv3{border-color:var(--lime)}
+.photo-note{font:10px var(--mono);line-height:1.6;color:var(--muted);margin:-20px 0 24px}
+
+/* Fotografias tematicas dos eventos da comunidade. */
+.event{isolation:isolate;overflow:hidden;background:#10111f;color:var(--text)}
+.event:before{content:'';position:absolute;inset:0;z-index:-2;background:var(--event-image) center/cover no-repeat;transition:transform .4s ease}
+.event:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,8,18,.3),transparent 30%,rgba(7,8,18,.82) 70%,#070812)}
+.event span{padding:6px 9px;background:rgba(7,8,18,.8);border:1px solid var(--event-accent);color:var(--event-accent)}
+.event h3{font-size:39px;text-shadow:0 2px 15px #000}
+.event p{line-height:1.5;color:#e0e0ec}
+.event:hover:before{transform:scale(1.05)}
+.event.purple{--event-image:url('../assets/images/event-arcade.png');--event-accent:var(--purple)}
+.event.green{--event-image:url('../assets/images/event-manga.png');--event-accent:var(--lime)}
+.event.pink{--event-image:url('../assets/images/event-cosplay.png');--event-accent:var(--pink)}
+@media(prefers-reduced-motion:reduce){.event:before{transition:none}.event:hover:before{transform:none}}
+
+/* Catalogo demonstrativo com filtros por categoria. */
+#catalogo{scroll-margin-top:90px}
+.category-card:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+.catalog{background:#0c0d18}
+.catalog-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.catalog-filters button{padding:11px 14px;border:1px solid var(--line);background:var(--panel);color:var(--text);font:700 11px var(--font);cursor:pointer}
+.catalog-filters button[aria-pressed="true"]{background:var(--lime);border-color:var(--lime);color:#070812}
+.catalog-filters button:focus-visible,.catalog-interest:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.catalog-count{color:var(--muted);font:11px var(--mono);margin-bottom:24px}
+.catalog-art{aspect-ratio:1;overflow:hidden;background:#121020}
+.catalog-art img{display:block;width:100%;height:100%;object-fit:cover}
+.catalog-crop{background-size:200% 200%;background-repeat:no-repeat}
+.catalog-crop-game{background-position:right top}
+.catalog-crop-figure{background-position:left top}
+.catalog-crop-cards{background-position:left bottom}
+.catalog-crop-lamp{background-position:right bottom}
+.catalog-product{display:flex;flex-direction:column}
+.catalog-product .product-info{display:flex;flex:1;flex-direction:column}
+.catalog-description{font-size:12px;line-height:1.6;color:var(--muted);margin-bottom:18px}
+.catalog-product strong{margin-top:auto}
+.catalog-interest{display:block;margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;font-weight:800;color:var(--lime)}
