@@ -31,6 +31,7 @@ const currency = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: '
 function renderCatalog(category = null) {
   const products = catalogProducts.filter(product => category === 'all' || product.category === category);
   catalogGrid.replaceChildren();
+  catalogGrid.hidden = category === null;
   for (const product of products) {
     const card = document.createElement('article');
     card.className = 'product-card catalog-product';
@@ -62,10 +63,8 @@ function renderCatalog(category = null) {
     price.textContent = currency.format(product.price);
     const action = document.createElement('a');
     action.className = 'catalog-interest';
-    action.href = `https://wa.me/5521999999999?text=${encodeURIComponent('Olá! Quero saber mais sobre: ' + product.name)}`;
-    action.target = '_blank';
-    action.rel = 'noopener noreferrer';
     action.textContent = 'Consultar item ↗';
+    PortalContacts.configure(action, 'whatsapp', 'Olá! Quero saber mais sobre: ' + product.name);
     info.append(label, name, description, price, action);
     card.append(art, info);
     catalogGrid.append(card);
@@ -87,5 +86,5 @@ for (const [category, name] of [['all', 'Todos'], ...Object.entries(catalogCateg
 document.querySelectorAll('.category-card[data-category]').forEach(link => {
   link.addEventListener('click', () => renderCatalog(link.dataset.category));
 });
-document.querySelectorAll('[data-catalog-all]').forEach(link => link.addEventListener('click', () => renderCatalog()));
-renderCatalog();
+document.querySelectorAll('[data-catalog-all]').forEach(link => link.addEventListener('click', () => renderCatalog('all')));
+renderCatalog('figures');

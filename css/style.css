@@ -19,7 +19,7 @@ h1,h2,h3,p{margin-top:0}
 h1{font-size:clamp(45px,6vw,92px);line-height:.94;letter-spacing:-.075em;margin:22px 0}
 h1 em,h2 span{font-style:normal;color:var(--blue);text-shadow:0 0 35px rgba(53,167,255,.35)}
 .hero-text{max-width:480px;color:var(--muted);font-size:16px;line-height:1.7}
-.hero-actions{display:flex;gap:12px;margin-top:30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .btn{display:inline-flex;gap:18px;align-items:center;padding:15px 20px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;transition:.25s}
 .btn-primary{background:var(--lime);color:#0a0a10}
 .btn-primary:hover{background:#fff;box-shadow:0 0 30px rgba(200,255,77,.45);transform:translateY(-3px)}
@@ -282,3 +282,62 @@ footer{padding:70px clamp(20px,9vw,150px) 22px;background:#05050b}
 .catalog-description{font-size:12px;line-height:1.6;color:var(--muted);margin-bottom:18px}
 .catalog-product strong{margin-top:auto}
 .catalog-interest{display:block;margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;font-weight:800;color:var(--lime)}
+
+/* Refinamento visual: pessoas em destaque e canais consistentes. */
+:root{--muted:#b8b9ca}
+.section{opacity:1;transform:none;scroll-margin-top:96px}
+.will-reveal:not(.show){opacity:0;transform:translateY(20px)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--lime);outline-offset:5px}
+.skip-link{position:fixed;top:8px;left:16px;padding:14px;background:var(--lime);color:#070812;z-index:30;transform:translateY(-150%)}
+.skip-link:focus{transform:none}
+.project-notice{position:absolute;top:86px;left:clamp(20px,5vw,80px);right:20px;z-index:2;font:10px/1.6 var(--mono);color:#d0d1df}
+.menu-toggle{min-width:44px;min-height:44px;align-content:center;justify-content:center;cursor:pointer}
+.nav a{padding:12px 0}
+.community{gap:40px;grid-template-columns:.85fr 1.15fr;background:radial-gradient(ellipse at 85% 50%,#24174d,transparent 65%),#0b0b16}
+.community-copy>p{margin-top:24px}
+.community-photo{margin:0;min-width:0}
+.community-photo img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;border-radius:24px 4px 24px 4px;border:1px solid #76719d}
+.community-photo figcaption{margin-top:12px;color:var(--muted);font:10px/1.6 var(--mono)}
+.event-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.event-list article{display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-top:3px solid var(--blue);background:linear-gradient(145deg,#1c1932,#10111f)}
+.event-list article:nth-child(2){border-top-color:var(--lime)}
+.event-list article:nth-child(3){border-top-color:var(--pink)}
+.event-list span{font:11px var(--mono);color:var(--lime)}
+.event-list h3{font-size:24px;letter-spacing:-.04em;margin:24px 0 16px}
+.event-list p{font-size:14px;line-height:1.8;color:var(--muted)}
+.event-list a{margin-top:auto;padding:14px 0;font-size:12px;font-weight:700;color:var(--lime)}
+.channel-status,.review-disclaimer{color:var(--muted);font-size:12px;line-height:1.8}
+.channel-status{margin-top:24px}
+.member:first-child{border-color:var(--blue)}
+.avatar{height:240px}
+.review-avatar{width:100%;height:180px;border-radius:14px 2px 14px 2px;border-width:1px}
+.review-avatar img{object-position:center 30%}
+.testimonial-grid p{font-size:15px}
+.photo-note{font-size:11px}
+.catalog-interest{min-height:44px;line-height:1.6}
+[aria-disabled="true"]{color:#b8b9ca!important;cursor:default}
+.product-card [aria-disabled="true"]::after{content:' · contato pendente';font-weight:500}
+.linktree .link-intro{font:500 14px/1.8 var(--font);letter-spacing:0;color:#d0d1df;text-transform:none;max-width:370px;margin:20px auto}
+.link-buttons a{min-height:60px;font-size:13px;text-align:left;gap:20px;border-radius:12px 2px 12px 2px;line-height:1.5}
+.link-buttons .featured-link{background:var(--lime);color:#070812;border-color:var(--lime)}
+.link-buttons a[aria-disabled="true"]{border-style:dashed;background:#11111f}
+.link-buttons a[aria-disabled="true"]:hover{transform:none;background:#11111f}
+.linktree h1{font-size:clamp(40px,12vw,55px)}
+.footer-bottom{color:#b8b9ca;line-height:1.6}
+@media(max-width:1100px){.team-grid{grid-template-columns:repeat(3,1fr)}.nav{gap:12px}.community{grid-template-columns:1fr}.event-list{grid-template-columns:1fr}}
+@media(max-width:560px){.avatar{height:210px}.member{padding:12px}.member h3{font-size:16px}.member span{font-size:12px}.review-avatar{height:220px}.community-photo img{aspect-ratio:4/3}.project-notice{font-size:9px;top:85px}.hero{padding-top:160px}.linktree{padding-top:24px}.back{margin-bottom:30px}.link-buttons a{font-size:12px}.team-grid .member:last-child{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.will-reveal:not(.show){opacity:1;transform:none}.product-card:hover,.category-card:hover,.btn:hover,.link-buttons a:hover{transform:none}}
+.event-feature{margin:0 0 28px}
+.event-feature img{display:block;width:100%;height:auto;max-height:460px;object-fit:cover;object-position:center 40%;border-radius:20px 4px 20px 4px;border:1px solid var(--line)}
+.event-feature figcaption{margin-top:12px;font:10px/1.6 var(--mono);color:var(--muted)}
+@media(max-width:560px){.community-photo img{aspect-ratio:2/1}.event-feature img{max-height:none}}
+
+/* Mesmas dimensões e alinhamento para os três atalhos da abertura. */
+.hero-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:stretch}
+.hero-actions .btn{width:100%;min-height:60px;padding:12px 14px;justify-content:space-between;gap:8px;border:1px solid var(--line);font-size:10px;line-height:1.5}
+.hero-actions .btn-primary{border-color:var(--lime)}
+.hero-actions .btn b{flex-shrink:0;font-size:16px}
+#catalog-grid[hidden]{display:none}
+@media(max-width:560px){.hero-actions{grid-template-columns:1fr;width:100%;align-items:stretch}.hero-actions .btn{min-height:56px;font-size:11px}}
+.hero-actions .btn-community{background:#38204f;border-color:#b77aed;color:#ecd9ff}
+.hero-actions .btn-community:hover{background:#4c2969;border-color:#d4a9ff;color:#fff}
