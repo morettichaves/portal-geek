@@ -1,0 +1,7 @@
+Tool: built-in imagegen. Final assets: controller-xbox.webp and controller-playstation.webp, 1000px WebP, quality 88.
+
+Xbox:
+Use case: product-mockup. Clean realistic catalog product photograph. A normal Xbox-style wireless videogame controller, matte black, asymmetric analog sticks, familiar colored ABXY buttons, ordinary real-world design, no RGB lights. One single controller resting on a dark tabletop, three-quarter view showing the full controller and buttons, neutral softly blurred background, soft natural studio lighting. Square composition with generous margins, sharp believable plastic texture. No packaging, no added text, no watermark, no extra controllers.
+
+PlayStation:
+Use case: product-mockup. Clean realistic catalog product photograph. A normal PlayStation DualSense-style videogame controller, white shell and black central panel, symmetric analog sticks, ordinary real-world design, no RGB lights. One single controller resting on a dark tabletop, three-quarter view showing the full controller and buttons, neutral softly blurred background, soft natural studio lighting. Square composition with generous margins, sharp believable plastic texture. No packaging, no added text, no watermark, no extra controllers.

@@ -1,0 +1,3 @@
+Tool: built-in imagegen. Reference: hq-velocista-livro.webp. Output: hq-velocista-livros-fundo.webp (1000px WebP, quality 88).
+
+Edit only the background of this product photograph: add several physical books lying horizontally in two small stacks on the tabletop behind the upright featured comic book, visible around both sides, softly out of focus with tasteful dark blue, burgundy and beige covers, no titles or lettering. Keep the foreground upright comic book, its cover artwork, shape, angle, paper edges, size and position unchanged. Preserve the dark table, warm soft interior lighting and square composition. Stacks must not cover or overlap the featured front cover. Photorealistic materials and shadows, no logos, no watermark, no added text.

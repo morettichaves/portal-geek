@@ -1,0 +1,4 @@
+Tool: built-in imagegen. Output: hq-velocista-livro.webp, 1000px WebP, quality 88.
+References: hq-aranha.webp (product photography), hq-velocista-atrasado.webp (cover artwork).
+
+Create a premium photographed physical comic book matching image 1's product photography: upright book resting on a dark tabletop, same slight three-quarter angle, visible white paper edges and spine, softly blurred elegant interior background with a plant and warm lamp, natural soft light and realistic contact shadow. Use image 2 as the printed front cover artwork, preserving the original fictional red-and-black runner looking at a phone, futuristic rainy city and orange-blue energy trails. The artwork must be confined to the book cover. Entire book visible, similar size and framing to image 1, square catalog photograph. No text, no logos, no watermark.

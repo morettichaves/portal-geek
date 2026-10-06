@@ -1,0 +1,4 @@
+Tool: built-in imagegen. References: controller-xbox-cosmic.webp, controller-playstation-cosmic.webp. Outputs: controller-xbox-mesa.webp, controller-playstation-mesa.webp (1000px WebP, quality 88).
+
+Prompt applied to each reference:
+Edit the reference product photo: reposition the same controller lying naturally on its back on the tabletop, buttons facing upward, photographed from a slightly elevated three-quarter angle. The rear body and both handles must visibly rest on the table in a physically stable pose, with clear tight contact shadows directly beneath them. Preserve the controller model, proportions, buttons and blue-purple galaxy printed skin. Dark table and softly blurred room, natural studio illumination. Entire controller visible with margins, square photograph. No hovering or balancing upright on tips, no stands, no added text or watermark.

@@ -1,0 +1,7 @@
+Generated with the built-in imagegen tool. Output converted to 1000px WebP, quality 88.
+
+Yasuo prompt:
+Use case: product-mockup. Premium 3D collectible action figure inspired by League of Legends. Yasuo: blue-clad Ionian swordsman, long dark high ponytail, steel katana, detailed blue shoulder armor, wind base, deep blue and steel gray studio background with pale blue rim lighting. Single full-body collectible statue on display base, entire head, swords and base fully in frame with generous margins, square product photograph, detailed resin and metallic materials, elegant premium studio rendering. No text, no logos, no watermarks. Save image for website asset.
+
+Yone prompt:
+Use case: product-mockup. Premium 3D collectible action figure inspired by League of Legends. Yone: long black-haired spirit hunter, red azakana mask, two swords, layered dark clothing and bandages, spectral red mist base, black crimson and spectral blue studio background. Single full-body collectible statue on display base, entire head, swords and base fully in frame with generous margins, square product photograph, detailed resin and metallic materials, elegant premium studio rendering. No text, no logos, no watermarks. Save image for website asset.

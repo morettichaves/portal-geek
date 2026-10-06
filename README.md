@@ -39,7 +39,7 @@ Os caminhos são relativos e compatíveis com `/portal-geek/`. Não foi feito pu
 
 ## Contatos autorizados e futuras alterações
 
-O responsável autorizou manter o WhatsApp **+55 (21) 99999-9999** e informou o Instagram **[@moretti_rj](https://www.instagram.com/moretti_rj/)**. Ambos estão configurados e ativos no site e na página de links. O endereço do Instagram utiliza a URL direta, sem parâmetros de QR code. O e-mail demonstrativo anterior foi removido dos destinos ativos.
+O responsável autorizou manter o WhatsApp **+55 (21) 99999-9999** e informou o Instagram **[@portal_geek021](https://www.instagram.com/portal_geek021/)**. Ambos estão configurados e ativos no site e na página de links. O endereço do Instagram utiliza a URL direta, sem parâmetros de QR code. O e-mail demonstrativo anterior foi removido dos destinos ativos.
 
 Em `js/contacts.js`, preencha `whatsapp` com código do país, DDD e número (somente dígitos), `instagram` com o nome de usuário (sem `@`) e defina `authorized: true` **somente após autorização do responsável**. Não coloque credenciais ou tokens neste arquivo público. Os destinos e mensagens serão aplicados automaticamente em ambas as páginas e nos cards, com texto do produto codificado na URL do WhatsApp. Não é necessário editar URLs em outros arquivos.
 
@@ -81,4 +81,4 @@ Antes de publicar, revise visualmente os arquivos, confirme a documentação das
 
 ### Atualização dos contatos
 
-WhatsApp **+55 (21) 99999-9999** e Instagram **@moretti_rj** autorizados e ativados. Verificada a montagem dos links e das mensagens contextualizadas, sem enviar mensagens nem alterar o perfil. A existência da conta de WhatsApp e o recebimento das mensagens não foram verificados.
+WhatsApp **+55 (21) 99999-9999** e Instagram **@portal_geek021** autorizados e ativados. Verificada a montagem dos links e das mensagens contextualizadas, sem enviar mensagens nem alterar o perfil. A existência da conta de WhatsApp e o recebimento das mensagens não foram verificados.

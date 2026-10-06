@@ -1,0 +1,4 @@
+Tool: built-in imagegen. Final assets: controller-xbox-cosmic.webp and controller-playstation-cosmic.webp (1000px WebP, quality 88). References: controller-xbox.webp and controller-playstation.webp respectively.
+
+Prompt for each controller (replace {type} with xbox or playstation):
+Edit this controller product photograph by changing only the controller shell surface finish into a tasteful custom cosmic skin for the Portal Geek website. Preserve exact controller geometry, stick layout, buttons, recognizable {type} controller shape, camera angle, tabletop and lighting. Skin palette: midnight black/navy base, electric blue #35a7ff, purple #9d4edd, small magenta accents, delicate star speckles and flowing nebula gradients. Premium printed vinyl look, subtle restrained design, no excessive lights, no glowing plastic. Keep button symbols clearly readable and sticks black. No added words or logos, no watermark. Entire controller fully visible.

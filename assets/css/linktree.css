@@ -1,0 +1,25 @@
+/* Simple, consistent links on the left; cinematic portal on the right. */
+.linktree-page{background:radial-gradient(ellipse at 80% 48%,#111631,transparent 60%),#080814}
+.cinematic-portal{position:sticky;top:max(24px,calc(50dvh - 330px));align-self:center;aspect-ratio:1;width:100%;isolation:isolate;pointer-events:none}
+.cinematic-portal img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:screen;mask-image:radial-gradient(ellipse,#000 48%,#000e 65%,transparent 78%);animation:cinematic-drift 9s ease-in-out infinite}
+.cinematic-portal-aura{position:absolute;inset:12%;z-index:-1;border-radius:50%;background:radial-gradient(ellipse,#35a7ff22,#9d4edd18 50%,transparent 70%);filter:blur(30px);animation:cinematic-aura 6s ease-in-out infinite}
+@keyframes cinematic-drift{50%{transform:translateY(-9px) scale(1.015)}}
+@keyframes cinematic-aura{50%{opacity:.5;transform:scale(1.06)}}
+@media(max-width:800px){.cinematic-portal{position:relative;top:auto;width:min(100%,420px);justify-self:center;grid-row:2}}
+@media(prefers-reduced-motion:reduce){.cinematic-portal img,.cinematic-portal-aura{animation:none}}
+.portal-travelling{overflow:hidden}
+.portal-travelling .linktree-copy{pointer-events:none}
+.portal-travel{position:fixed;inset:0;z-index:100;overflow:hidden;background:#08081400;pointer-events:auto}
+.portal-travel[hidden]{display:none}
+.portal-travel>img{position:absolute;left:var(--travel-x);top:var(--travel-y);width:var(--travel-size);height:var(--travel-size);object-fit:contain;transform:translate(-50%,-50%);mask-image:radial-gradient(ellipse,#000 48%,#000e 65%,transparent 78%)}
+.portal-travel-glow{position:absolute;inset:0;opacity:0;background:radial-gradient(ellipse,#779aff88,#29185bcc 60%,#080814)}
+.portal-travelling .linktree{transform-origin:var(--dive-origin);animation:camera-depart 1.4s ease-in forwards}
+.portal-travel.is-travelling{animation:travel-background 1.4s ease-in forwards}
+.portal-travel.is-travelling>img{animation:travel-through 1.4s cubic-bezier(.55,0,.8,.45) forwards}
+.portal-travel.is-travelling .portal-travel-glow{animation:travel-glow 1.4s ease-in forwards}
+.portal-travel-status{position:fixed;z-index:101;bottom:32px;left:20px;right:20px;text-align:center;font:11px/1.7 var(--mono);color:#dceaff;pointer-events:none}
+.portal-travel-status:empty{display:none}
+@keyframes camera-depart{0%{transform:scale(1);opacity:1}35%{transform:scale(1.08);opacity:.5}70%,100%{transform:scale(1.65);opacity:0}}
+@keyframes travel-through{0%{transform:translate(-50%,-50%) scale(1);opacity:1}35%{left:50%;top:50%;transform:translate(-50%,-50%) scale(1);opacity:1}70%{left:50%;top:50%;transform:translate(-50%,-50%) scale(2.8);opacity:1}100%{left:50%;top:50%;transform:translate(-50%,-50%) scale(10);opacity:0}}
+@keyframes travel-background{0%{background:#08081400}40%,100%{background:#080814}}
+@keyframes travel-glow{0%,60%{opacity:0}100%{opacity:1}}

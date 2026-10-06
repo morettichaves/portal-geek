@@ -1,6 +1,6 @@
 ﻿// Somente contatos aprovados pelo responsável pelo projeto.
 // WhatsApp: código do país + DDD + número, apenas dígitos. Instagram: nome sem @.
-const PORTAL_CONTACTS = Object.freeze({ whatsapp: '5521999999999', instagram: 'moretti_rj', authorized: true });
+const PORTAL_CONTACTS = Object.freeze({ whatsapp: '5521999999999', instagram: 'portal_geek021', authorized: true });
 window.PortalContacts = {
   configure(element, channel, message = 'Olá! Quero conhecer a Portal Geek.') {
     const value = PORTAL_CONTACTS[channel];
@@ -20,7 +20,19 @@ window.PortalContacts = {
     element.removeAttribute('title');
     element.target = '_blank';
     element.rel = 'noopener noreferrer';
-    if (element.dataset.activeLabel) element.textContent = element.dataset.activeLabel;
+    if (element.dataset.activeLabel) {
+      const label = element.dataset.activeLabel;
+      if (element.closest('.link-buttons') && label.endsWith('↗')) {
+        const text = document.createElement('span');
+        text.textContent = label.slice(0, -1).trim();
+        const arrow = document.createElement('b');
+        arrow.textContent = '↗';
+        arrow.setAttribute('aria-hidden', 'true');
+        element.replaceChildren(text, arrow);
+      } else {
+        element.textContent = label;
+      }
+    }
   },
   refresh() {
     document.querySelectorAll('[data-channel]').forEach(el => this.configure(el, el.dataset.channel, el.dataset.message));

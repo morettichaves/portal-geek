@@ -1,0 +1,13 @@
+Tool: built-in imagegen. Final asset: hq-aranha.webp (1000px WebP, quality 88).
+
+Final prompt:
+Use case: product-mockup. Square catalog photograph of a physical paperback comic book standing slightly angled, with visible printed spine and paper edges on a dark studio table. Front cover is an original ink-and-halftone illustration: A humorous original masked urban acrobat in coral and turquoise clothing carrying a work satchel, suspended on a thin rope between city buildings while a few paper invoices flutter, lively expressive comic scene. Clearly a printed comic magazine, not a statue. Complete book fully visible with margins. No lettering, no text, no trademarks or logos, no watermark.
+
+Second final asset: hq-sentinela-offline.webp (1000 x 1250px WebP, quality 88), generated with built-in imagegen.
+
+Final prompt:
+Capa de história em quadrinhos totalmente original, estilo noir futurista, arte digital detalhada. Um vigilante urbano fictício chamado Sentinela Offline está em seu esconderijo tecnológico subterrâneo: um grande laboratório escuro construído dentro de uma formação rochosa, com computadores, drones desligados, fios expostos e veículos futuristas ao fundo.
+
+O personagem usa uma armadura preta fosca e azul-petróleo, com sobretudo curto assimétrico, capacete liso sem orelhas, visor único verde-claro e símbolo geométrico abstrato no peito. Ele segura um roteador quebrado como se fosse uma evidência de crime, olhando para ele com total seriedade. Nas telas ao redor, aparecem apenas ícones genéricos de “sem conexão”, interferência e barras de sinal fraco.
+
+Atmosfera dramática e engraçada, iluminação azul fria, pequenas luzes vermelhas de alerta, chão metálico molhado com reflexos, fumaça leve e cabos espalhados. Sem personagens, símbolos, cidades, trajes ou logotipos reconhecíveis de franquias existentes. Sem texto, sem marcas d’água. Capa vertical 4:5, com espaço livre no topo para título.
