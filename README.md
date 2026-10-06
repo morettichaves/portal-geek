@@ -25,11 +25,7 @@ js/catalog.js              Produtos demonstrativos e filtros
 assets/images/             Logo e imagens locais
 ```
 
-## Executar e publicar depois da revisão
-
-Abra esta pasta (a que contém `index.html`) no Live Server ou execute `python -m http.server 8000` e acesse `http://localhost:8000/`. Nenhuma instalação de dependências é necessária.
-
-O repositório remoto configurado é `morettichaves/portal-geek`. Depois que o GitHub Pages for habilitado para a pasta/branch que contém este `index.html`, a URL esperada para colocar na bio será:
+URL esperada para colocar na bio será:
 
 **https://morettichaves.github.io/portal-geek/pages/linktree.html**
 
